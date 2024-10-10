@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #b2c22c;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Modificación para la transparencia */
+.header {
+  position: relative; /* Necesario para posicionar la superposición */
+  background-image: url(images/fondo.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 150vh;
+  display: flex;
+  align-items: flex-start; /* Alinea el contenido en la parte superior */
+  justify-content: center; /* Centra horizontalmente */
+  text-align: center;
+  padding-top: 80px;
+}
+
+/* Superposición transparente */
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente */
+  z-index: 1; /* Asegura que el fondo esté detrás del contenido */
+}
+
+.header-info {
+  position: relative;
+  z-index: 2; /* Asegura que el contenido esté por encima de la superposición */
+}
+
+.header-info h1 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 70;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.header-info p {
+  color: white;
+  font-size: 22px;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+}
+
+.museo {
+
+   padding: 100px 0;
+   display: flex;
+   align-items: center;
+}
+
+.museo-1 {
+    width: 50%;
+    padding-right:150PX;
+}
+
+.museo-1 h2 {
+   font-size: 40px
+   text-transform: uppercase;
+   font-weight: 600;
+
+}
+.museo-1 p{
+  font-size: 16px;
+
+}
+.img-1 {
+  width: 250px;
+}
